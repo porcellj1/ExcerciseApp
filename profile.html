@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Information</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {background-color: bisque;}
+
+        nav {
+            width: 50%;
+            background-color: aqua;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdownContent {
+            position: absolute;
+            display: none;
+            background-color: wheat;
+        }
+        button {
+            height: 10px;
+            border: none;
+            background-color: transparent;
+            font-size: x-large;
+            padding: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown:hover .dropdownContent {
+            display: block;
+            position: absolute;
+        }
+        li {
+            list-style: none;
+        }
+        ul:hover {
+            background-color: sienna;
+        }
+        select, input {margin: 5px;}
+    </style>
+</head>
+<body>
+    <nav>
+        <button>Home</button>
+        <button>Profile</button>
+        <div class="dropdown">
+            <button>Log</button>
+            <li class="dropdownContent">
+                <ul>Activity</ul>
+                <ul>Weight</ul>
+                <ul>Food</ul>
+            </li>
+        </div>
+        <div class="dropdown">
+            <button>Progress Tracking</button>
+            <li class="dropdownContent">
+                <ul>Summary</ul>
+                <ul>Graph</ul>
+                <ul>Goals</ul>
+            </li>
+        </div>
+    </nav>
+
+    <h1>Profile Information</h1>
+    <label for="name">Name: </label>
+    <input type="text" id="name"><br>
+
+    <label for="gender">Gender: </label>
+    <select name="gender" id="gender">
+        <option>Prefer Not to Respond</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Nonbinary/Other</option>
+    </select><br>
+    <input type="checkbox" id="show_gender"><label for="show_gender">Display gender in profile?</label><br>
+    <label for="pronouns">Pronouns: </label>
+    <select name="pronouns">
+        <option>she/her/hers</option>
+        <option>he/him/his</option>
+        <option>they/them/theirs</option>
+        <option>refer to me by my name</option>
+    </select><br>
+    <input type="checkbox" id="show_pronouns"><label for="show_pronouns">Display pronouns in profile?</label><br><br>
+
+    <label for="int">What are your interests?</label><br>
+    <form id="int">
+        <input type="checkbox" name="interests" id="hiking">
+        <label for="hiking">hiking</label><br>
+        <input type="checkbox" name="interests" id="running">
+        <label for="running">running</label><br>
+        <input type="checkbox" name="interests" id="lifting">
+        <label for="lifting">weight lifting</label><br>
+        <input type="checkbox" name="interests" id="mma">
+        <label for="mma">martial arts</label><br>
+        <input type="checkbox" name="interests" id="swimming">
+        <label for="swimming">swimming</label>
+    </form>
+    
+</body>
+</html>
